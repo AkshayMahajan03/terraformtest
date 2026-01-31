@@ -25,3 +25,10 @@ resource "aws_lb" "alb" {
   security_groups = [aws_security_group.alb_sg.id]
   subnets         = var.subnet_ids
 }
+
+resource "aws_lb_target_group" "tg" {
+  name     = "simple-tg"
+  port     = 80
+  protocol = "HTTP"
+  vpc_id   = var.vpc_id
+}
