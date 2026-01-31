@@ -1,16 +1,5 @@
-variable "region" {
-  type = string
+variable "instance.type" {
+  description = "EC2 instance type"
+  type  = string
+  default  = "t2.micro"
 }
-
-variable "vpc_id" {
-  type = string
-}
-
-variable "subnet_ids" {
-  type = list(string)
-}
-
-variable "instance_id" {
-  type = string
-}
-
